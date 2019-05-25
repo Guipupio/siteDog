@@ -6,5 +6,5 @@ from django.http import HttpResponse
 
 
 
-def index(request):
+def home_page(request):
     return HttpResponse("Hello, world. You're at the polls index.")
