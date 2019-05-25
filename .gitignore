@@ -2,6 +2,11 @@
 __pycache__/
 
 
+# Extensoes indesejadas
+
+*.pyc
+
+
 # Compiled source #
 ###################
 *.com
