@@ -1,5 +1,5 @@
 # define ativar_motor '1'
-# define desativar_motor '2'
+# define desativar_motor '0'
 
 char comando = 'S';
 bool novo_comando = false;
