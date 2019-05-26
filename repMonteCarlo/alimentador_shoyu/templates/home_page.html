@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "bootstrap-4.3.1/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/home_page.css" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Rep Inteligente - Alimentador</title>
+  </head>
+  <body>
+
+  <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>REP - Inteligente</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Pagina Inicial</a>
+                        </li>
+                        <li>
+                            <a href="#">Finanças</a>
+                        </li>
+                        <li>
+                            <a href="#">Semana do Lixo</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div id="content" style="background:rgb(100,100,100,0.1)">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                
+                    <div class="col-md-6">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fa fa-list"></i>
+                            <span>Menu</span>
+                        </button>
+                    </div>
+                    
+                    <i class="fa fa-flag">Semana do lixo: Quarto 1</i>
+                    
+                    
+                </div>
+            </nav>
+            
+                <h3>Controle Alimentador - Shoyu</h3>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="alimentar-agora" class="card mouse_click" style="width: 18rem;margin-left:20%; margin-top:5%">
+                        <div class="card-body">
+                            <h5 class="card-title">Alimentar Agora</h5>
+                            <p class="card-text">Clique aqui para alimentar agora!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div id="alimentar-agora" class="card" style="width: 18rem;margin-left:20%; margin-top:5%">
+                        <div class="card-body">
+                            <h5 class="card-title">Grafico - Nivel de comida</h5>
+                            <p class="card-text">Exibe um Grafico com alguns niveis de comida</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6" style="margin-left:33%; margin-top:20%">
+                    Última refeição ocorreu às {{ultima_refeicao}}
+                </div>
+            </div>
+
+        </div>
+  </div>
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        $("#alimentar-agora").click(function() {
+            alert("Enviando Sinal Para alimentar Agora!")
+        })
+    </script>
+  </body>
+</html>
